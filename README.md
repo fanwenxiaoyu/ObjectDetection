@@ -1,8 +1,17 @@
 
 
-# Tensorflow Object Detection Hand Jesture Detection
-<p>This project enable users to train and leverage your own object detection model using the Tensorflow Object Detection API. It is based on https://github.com/nicknochnack/TFODCourse, I changed image capture process and detection process to avoid jupter crush. 
-
+# Tensorflow Object Detection Hand gesture Detection
+<p>This project enable users to train and leverage your own object detection model using the Tensorflow Object Detection API. It is based on https://github.com/nicknochnack/TFODCourse, I changed image capture process and detection process to avoid jupter crush and enable self paced image collection. 
+<iframe 
+src="https://github.com/fanwenxiaoyu/ObjectDetection/blob/main/ResultSample.mov" 
+scrolling="no" 
+border="0" 
+frameborder="no" 
+framespacing="0" 
+allowfullscreen="true" 
+height=600 
+width=800> 
+</iframe>
 ## Steps
 <br />
 <b>Step 1.</b> Clone this repository: https://github.com/nicknochnack/TFODCourse
