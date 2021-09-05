@@ -5,7 +5,6 @@
 <iframe 
 src="https://github.com/fanwenxiaoyu/ObjectDetection/blob/main/ResultSample.mov" 
 scrolling="no" 
-border="0" 
 frameborder="no" 
 framespacing="0" 
 allowfullscreen="true" 
