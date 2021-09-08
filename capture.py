@@ -12,8 +12,9 @@ import time
 
 labels = ['thumbsup', 'thumbsdown', 'thankyou', 'livelong']
 #labels = ['thumbsup', 'thumbsdown']
-number_imgs = 5
+number_imgs = 5 #set the number of images you want to collect here.
 IMAGES_PATH = os.path.join('Tensorflow', 'workspace', 'images', 'collectedimages')
+flag = True
 
 if not os.path.exists(IMAGES_PATH):
     if os.name == 'posix':
@@ -31,10 +32,15 @@ for label in labels:
 
 for label in labels:
     cap = cv2.VideoCapture(0)
+    if not flag:
+        break
     print('Press S to take a picture, ESC to quit')
     print('Collecting images for {}'.format(label))
     time.sleep(3)
+
     for imgnum in range(number_imgs):
+        if not flag:
+            break
         print('Collecting image {}'.format(imgnum))
         
         #cv2.imshow('frame', frame)
@@ -43,6 +49,7 @@ for label in labels:
             
             k = cv2.waitKey(1)
             if k ==27:
+                flag = False
                 break
             elif k & 0xFF==ord('s'):
                 imgname = os.path.join(IMAGES_PATH,label,label+'.'+'{}.jpg'.format(str(uuid.uuid1())))
@@ -50,6 +57,7 @@ for label in labels:
                 time.sleep(2)
                 break
             cv2.imshow('frame', frame)
+        
         
 
 cap.release()
